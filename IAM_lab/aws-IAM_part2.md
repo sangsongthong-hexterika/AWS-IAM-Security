@@ -138,5 +138,16 @@ The IAM accounts must have the toggle enabled first (account-level switch), and 
 
 ---
 
+## Let's test this out on AWS lab
+
+### Special groups & policies that needs to be created by the root account
+
+This group is called the AdministratorAccess group.
+
+Q: Why is this group so special?
+A: It is because technically any IAM account with AdministratorAccess policy can create this group, but the best practice is to create a policy and attach it to a group. This means if the group is created by the root account, then, there is no need to re-create this group again even if in theory the IAM user with AdministratorAccess are trusted by the root account, therefore, have the rights to create any group or policy including creating another AdministratorAccess group. By following this best practice, you can avoid getting confuse and able to manage other IAM users with AdministratorAccess in a more organized and more structured way than manually attached the policy to each one of them. More on this in part 2.
+
+---
+
 **Author:** Sangsongthong C.
 **Publish Date:**
