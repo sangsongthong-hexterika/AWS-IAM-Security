@@ -76,22 +76,35 @@ After I am done with the verification process, I am greeted with the below scree
 
 ---
 
-## 2. Setup MFA For The Root Account
+## 2. Sign in as root and set up MFA
 
-After signing into the root account, on the console, I searched for IAM. There was a button to set the MFA so I set the MFA.
+After signing into the root account, I went to the IAM console and added MFA
+to the root user using an authenticator app.
+
+The screenshot below is the IAM dashboard afterward. Under **Security
+recommendations** it confirms two things at once, both green: the root user
+has MFA, and the root user has no active access keys. (No long-lived keys on
+root is the other thing you want true from day one — root shouldn't have keys
+at all.)
 
 ![MFA_Root_Account_Set](day0_images/aws-root-mfa-setup-success-v1.png)
 
-Then, I logged out and logged back in to verify that the MFA is set correctly. Noted that when I signed out, I had to sign in with the root email. At this point, there is no billing or other user setup yet.
+Then I logged out and logged back in to confirm the MFA actually works. Note
+that signing out of root means signing back in with the **root email** — that
+doesn't change. At this point there's no billing and no other users yet.
 
-## 2. First console sign-in and region
+## 3. Set the region
 
-I sign in with the root email (no other users exist yet), then set the region to ***US East (N. Virginia)*** / ***us-east-1***. Not for "consistency" — for two concrete reasons:
+Next I set the region to **US East (N. Virginia) / us-east-1**. Not for
+"consistency" — for two concrete reasons:
 
-1. New AWS features and updates land in ***us-east-1*** first.
++ New AWS features and updates land in ***us-east-1*** first.
 
-2. Billing alarms can only be created in ***us-east-1***, even though the billing metric itself is global. This region choice is what makes the Walkthrough 02 billing alarm possible.
++ Billing alarms can only be created in ***us-east-1***
 
-I am getting ready to set the billing alarm.
+  + The billing metric is stored only in that region even though it reflects your account's worldwide charges.
+  
+  + Pinning the account here is what makes the Walkthrough 02 billing
+   alarm possible.
 
----
+With root secured and the region set, I'm ready to set up the billing alarm.
