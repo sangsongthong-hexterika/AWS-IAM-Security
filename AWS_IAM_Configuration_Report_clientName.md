@@ -4,16 +4,16 @@
 
 ### 1. Account Summary
 
-- AWS Account ID: `xxxxxxxxxxxx`
-- Account Purpose: `[e.g. Dev/Test/Staging/Prod]`
-- Setup Date: `[YYYY-MM-DD]`
-- Total Users Configured: `[X]`
++ AWS Account ID: `xxxxxxxxxxxx`
++ Account Purpose: `[e.g. Dev/Test/Staging/Prod]`
++ Setup Date: `[YYYY-MM-DD]`
++ Total Users Configured: `[X]`
 
 ---
 
 ## 2. IAM Structure
 
-**Groups Created**
+### Groups Created
 
 | Group Name | Permissions Attached | Notes |
 | --- | --- | --- |
@@ -21,11 +21,13 @@
 | `Finance` | Billing | View billing only |
 | `Admins` | AdministratorAccess | Admins only |
 
-**Roles Created**
+### Roles Created
 
-*(Optional if using roles)*
+| Role | Notes |
+| --- | --- |
+| Accountant | Work on billing and budgeting |
 
-**Users Created**
+### Users Created
 
 | User | Assigned Group(s) | MFA | Notes |
 | --- | --- | --- | --- |
@@ -66,13 +68,13 @@
 
 ### 5. Recommendations & Next Steps
 
-- Review users quarterly to ensure access is still appropriate
-- Consider enabling AWS CloudTrail for auditing access
-- If account grows, consider upgrading to Organizations setup
++ Review users quarterly to ensure access is still appropriate
++ Consider enabling AWS CloudTrail for auditing access
+  + If account grows, consider upgrading to Organizations setup
 
 ---
 
-# 🔐 AWS IAM Setup & Security Hardening Report
+## 🔐 AWS IAM Setup & Security Hardening Report
 
 **Client:** [Client Name]
 
@@ -88,11 +90,11 @@ This report documents the IAM configuration and security measures implemented in
 
 ### Key Highlights
 
-- IAM users structured via groups and roles
-- MFA enforced for all users
-- Root account protected and isolated
-- Secure password policy configured
-- Clear user onboarding documentation provided
++ IAM users structured via groups and roles
++ MFA enforced for all users
++ Root account protected and isolated
++ Secure password policy configured
++ Clear user onboarding documentation provided
 
 ---
 
@@ -101,21 +103,21 @@ This report documents the IAM configuration and security measures implemented in
 The following steps were completed during the engagement:
 
 1. **Root Account Configuration**
-    - Verified MFA and access key settings
-    - Separated billing access where applicable
+    + Verified MFA and access key settings
+    + Separated billing access where applicable
 2. **IAM Group and Role Setup**
-    - Created Admin, Developer, Finance groups
-    - Assigned AWS-managed policies to groups
+    + Created Admin, Developer, Finance groups
+    + Assigned AWS-managed policies to groups
 3. **User Creation and Access Control**
-    - Created IAM users and assigned to appropriate groups
-    - Enforced password reset at first login
-    - Enabled MFA for each user
+    + Created IAM users and assigned to appropriate groups
+    + Enforced password reset at first login
+    + Enabled MFA for each user
 4. **Password & Access Key Security**
-    - Configured password policy (length, complexity, rotation)
-    - Disabled unused access keys and root access key
+    + Configured password policy (length, complexity, rotation)
+    + Disabled unused access keys and root access key
 5. **Verification**
-    - Tested access boundaries of user roles
-    - Ensured billing access and admin privileges are separated
+    + Tested access boundaries of user roles
+    + Ensured billing access and admin privileges are separated
 
 ---
 
@@ -132,35 +134,32 @@ The following steps were completed during the engagement:
 
 ## 3. IAM Best Practices Reference
 
-- ✅ Enforce MFA on root and all users
-- ✅ Use groups, not direct user-policy attachment
-- ✅ Apply AWS-managed policies unless advanced access control needed
-- ✅ Rotate access keys if programmatic access is used
-- ✅ Avoid daily use of root account
-- ✅ Enable CloudTrail and consider Config for monitoring
++ ✅ Enforce MFA on root and all users
++ ✅ Use groups, not direct user-policy attachment
++ ✅ Apply AWS-managed policies unless advanced access control needed
++ ✅ Rotate access keys if programmatic access is used
++ ✅ Avoid daily use of root account
++ ✅ Enable CloudTrail and consider Config for monitoring
 
 ---
 
 ## 4. Deliverables
 
-- IAM structure diagram (included in appendix)
-- User onboarding guide (step-by-step)
-- Password policy and MFA verification screenshots
-- Role/group assignment table
++ IAM structure diagram (included in appendix)
++ User onboarding guide (step-by-step)
++ Password policy and MFA verification screenshots
++ Role/group assignment table
 
 ---
 
 ## 5. Legal Notice
 
 > Hexterika Cyberlab is a business brand of Sangsongthong Chantaranothai.
-> 
-> 
-> This service was provided on a freelance basis. Business registration as an Individual Entrepreneur (IE) in Georgia is planned for November 2025.
-> 
+>
 > This report is for informational and operational use only and does not constitute formal compliance or certification advice.
-> 
+>
 > You (the client) are responsible for final verification and acceptance of configurations.
-> 
+>
 
 ---
 
@@ -172,7 +171,7 @@ This setup demonstrates secure configuration of IAM fundamentals with a focus on
 
 The version from the report writing AI
 
-# 🔐 AWS IAM Configuration Report – [Client Name]
+## 🔐 AWS IAM Configuration Report – [Client Name]
 
 **Prepared By:** Hexterika Cyberlab (Sangsongthong Chantaranothai)  
 **Date:** [YYYY-MM-DD]
@@ -185,12 +184,12 @@ This report documents the initial AWS IAM configuration for [Client Name]. The w
 
 ### Key Deliverables
 
-- IAM groups with AWS-managed least-privilege policies  
-- MFA enforced for all IAM users  
-- Root account secured and restricted  
-- Password policy implemented  
-- Step-by-step user onboarding process provided  
-- Aligned with AWS best practices to support compliance readiness  
++ IAM groups with AWS-managed least-privilege policies  
++ MFA enforced for all IAM users  
++ Root account secured and restricted  
++ Password policy implemented  
++ Step-by-step user onboarding process provided  
++ Aligned with AWS best practices to support compliance readiness  
 
 ---
 
@@ -198,10 +197,10 @@ This report documents the initial AWS IAM configuration for [Client Name]. The w
 
 The goal of this engagement was to configure IAM for a new AWS account with a focus on:
 
-- Least-privilege access control
-- Identity separation (users, groups, roles)
-- Account owner protections (MFA, access key lockout)
-- Future readiness for AWS Organizations or compliance audits
++ Least-privilege access control
++ Identity separation (users, groups, roles)
++ Account owner protections (MFA, access key lockout)
++ Future readiness for AWS Organizations or compliance audits
 
 ---
 
@@ -210,26 +209,26 @@ The goal of this engagement was to configure IAM for a new AWS account with a fo
 The configuration process followed this workflow:
 
 1. **Root Account Hardening**
-   - Enabled MFA
-   - Disabled access keys (if present)
-   - Ensured billing access separation (if requested)
+   + Enabled MFA
+   + Disabled access keys (if present)
+   + Ensured billing access separation (if requested)
 
 2. **IAM Group Creation**
-   - Created `Admins`, `Developers`, and `Finance` groups
-   - Attached AWS-managed policies based on role
+   + Created `Admins`, `Developers`, and `Finance` groups
+   + Attached AWS-managed policies based on role
 
 3. **User Provisioning**
-   - Created IAM users based on client input
-   - Assigned users to one or more groups
-   - Enabled MFA for each user
-   - Required password reset at first login
+   + Created IAM users based on client input
+   + Assigned users to one or more groups
+   + Enabled MFA for each user
+   + Required password reset at first login
 
 4. **Password Policy Setup**
-   - Enforced minimum length, complexity, and 90-day rotation
+   + Enforced minimum length, complexity, and 90-day rotation
 
 5. **Security Checks**
-   - Verified root user is unused for day-to-day tasks
-   - Validated MFA and access boundary enforcement
+   + Verified root user is unused for day-to-day tasks
+   + Validated MFA and access boundary enforcement
 
 > 📸 *Add screenshots of IAM user, group, and password policy pages here*
 
@@ -238,7 +237,7 @@ The configuration process followed this workflow:
 ## 3. Setup Summary
 
 | Item | Value |
-|------|-------|
+| --- | --- |
 | AWS Account ID | `xxxxxxxxxxxx` |
 | Setup Date | `[YYYY-MM-DD]` |
 | Number of Users | `[X]` |
@@ -253,7 +252,7 @@ The configuration process followed this workflow:
 ## 4. IAM Group Structure
 
 | Group Name | Permissions | Notes |
-|------------|-------------|-------|
+| --- | --- | --- |
 | Admins | AdministratorAccess | Full access |
 | Developers | AmazonEC2FullAccess, CloudWatchReadOnlyAccess | Dev environments only |
 | Finance | Billing | Billing visibility |
@@ -263,7 +262,7 @@ The configuration process followed this workflow:
 ## 5. IAM Users Created
 
 | User | Group(s) | MFA Enabled | Notes |
-|------|----------|-------------|-------|
+| --- | --- | --- | --- |
 | John | Developers | ✅ | – |
 | Sarah | Finance | ✅ | – |
 
@@ -274,24 +273,27 @@ The configuration process followed this workflow:
 ## 6. Security Configuration Details
 
 ### MFA
-- MFA is required for all IAM users.  
-- MFA is also enabled on the root account.
+
++ MFA is required for all IAM users.  
++ MFA is also enabled on the root account.
 
 ### Password Policy
-- Minimum Length: 12 characters  
-- Complexity: Requires uppercase, number, and special character  
-- Rotation: Every 90 days
+
++ Minimum Length: 12 characters  
++ Complexity: Requires uppercase, number, and special character  
++ Rotation: Every 90 days
 
 ### Access Keys
-- Root account: Access key disabled  
-- User access keys: `[enabled/disabled]`
+
++ Root account: Access key disabled  
++ User access keys: `[enabled/disabled]`
 
 ---
 
 ## 7. Observations
 
 | Area | Status | Notes |
-|------|--------|-------|
+| --- | --- | --- |
 | Root Account | MFA enabled, login restricted | Root login discouraged |
 | Group Permissions | AWS-managed policies | Follows least privilege model |
 | Access Review | No unused users found | All active users accounted for |
@@ -301,19 +303,19 @@ The configuration process followed this workflow:
 
 ## 8. Recommendations
 
-- Enable AWS CloudTrail for audit logging and access monitoring  
-- Avoid using the root account for daily operations  
-- Review IAM users quarterly to ensure correct access  
-- If scaling, consider using AWS Organizations and SSO
++ Enable AWS CloudTrail for audit logging and access monitoring  
++ Avoid using the root account for daily operations  
++ Review IAM users quarterly to ensure correct access  
++ If scaling, consider using AWS Organizations and SSO
 
 ---
 
 ## 9. Deliverables
 
-- IAM Setup Guide (attached separately)  
-- Configuration Report (this document)  
-- Screenshot evidence (see image placeholders)  
-- Group and User tables (see above)
++ IAM Setup Guide (attached separately)  
++ Configuration Report (this document)  
++ Screenshot evidence (see image placeholders)  
++ Group and User tables (see above)
 
 ---
 

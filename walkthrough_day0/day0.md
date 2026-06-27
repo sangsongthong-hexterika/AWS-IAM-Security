@@ -40,7 +40,7 @@ Now I am facing the sign up page. There are two plans, free and paid. Of course 
 
 ![plan-page-selection-page-choose-free-plan](day0_images/aws-iam-lab-plan-selection-page-choose-free-plan.png)
 
-The additional details contains limitation of the free account plan. This is the new update that I really like. The last time I had trouble with controlling the payment due to me being an inexperience and had to pay for it. 
+The additional details contains limitation of the free account plan. This is the new update that I really like. The last time I had trouble with controlling the payment due to me being an inexperience and had to pay for it.
 
 This new limitation helps new and old clients be able to use free resources for free under limitation and without the risk of breaking the bank but it is temporary so the if you are going to use their resources in a serious way, then, it will be better to upgrade to the paid version later. Otherwise, you will have to keep rebuilding everything from scratch again and again.
 
@@ -85,8 +85,6 @@ Then, I paused for a few days. Once I come back, I went to the official aws cons
 Region: set to US East (N. Virginia) (us-east-1) for consistency. --> Nope. Not for consistency. Set here to be compatitble for lab documents and to get access to all features and update the fastest.
 
 I did this by going to the top right and picked ***us-east-1***.
-
-![ScreenshotForThat]()
 
 ### 2. Secure Root Account
 
